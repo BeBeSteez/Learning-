@@ -43,13 +43,13 @@ Local RunesAndHexes_Mechanic = {
 
 -- Gearing and swapping at higher enrages
 local GEAR_IDS = {
-    PowerMelee = {
+    PowerMeleeGear = {
         HEAD = ,
         BODY = ,
         LEGS = ,
         BOOTS = 
     },
-    TANKMelee = {
+    TANKMeleeGear = {
         HEAD = ,
         BODY = ,
         LEGS = ,
@@ -100,9 +100,9 @@ Config.UserInput = {
     },
     -- things to check in your inventory before fight
     presetChecks = {
-        {id = 48951, amount = 21}, -- 21 x vuln bombs
-        {id = 28227, amount = 4},  -- 4  x super sara brews
-        {id = 42267, amount = 5},  -- 5  x blue blubbers
+        {id = 48951, amount = 34}, -- 21 x vuln bombs
+        {id = 28227, amount = 6},  -- 4  x super sara brews
+        {id = 42267, amount = 6},  -- 5  x blue blubbers
 		{id = 57164, amount = 1},  -- 1  x ode to deceit
     },
     aura = {
@@ -111,3 +111,61 @@ Config.UserInput = {
         buffId = 26098, 
         interfaceSlot = 23
     },
+	--discord (private method)
+    discordNotifications = false,
+    webhookUrl = "Webhook_URL",
+    mention = false,
+    userId = "User_ID"
+}	
+
+Config.Variables = {
+    -- flags 
+    initialCheck = false,
+    bossDead = false,
+    initialRotationComplete = false,  -- Track if initial rotation is complete
+    hasUniqueInChest = false,  -- New flag to track if unique is in chest
+    chestChecked = false,  -- Track if chest has been checked this kill
+    clickedAqueductPortal = false,  -- New flag to track if we've clicked the aqueduct portal
+    -- mechanic tracking
+    currentMechanic = "none",
+    lastMechanic = "none",
+    pendingMechanic = "none",
+    mechanicStartTick = 0,
+    lastMechanicDetectionTick = 0,  -- Track when last mechanic was detected for cooldown
+    mechanicCount = 0,
+    mechanicHistory = {},  -- Track the 5 mechanics in order
+    -- minion targeting
+    targetMinionsActive = false,  -- Flag to control when minion targeting timer is active
+    -- attempts
+    bankAttempts = 0,
+    killCount = 0,
+    -- tiles
+    adreCrystalTile = {x = 0, y = 0, z = 0},
+    adreCrystalBDTile = {x = 0, y = 0, z = 0},
+    portalTile = {x = 0, y = 0, z = 0},
+    lootTile = {x = 0, y = 0, z = 0},
+    startspot = {x = 0, y = 0, range = 0},  -- Initialize startspot
+    safeSpot = {x = 0, y = 0, range = 0},
+    -- misc
+    adrenCrystalSide = "East",
+    gateTile = nil,
+    inPowerMeleeGear = false,
+    mechanicEndTicks = {
+    -- Placeholder  
+    },
+    chestLooted = false,  -- Track if we've looted/continued from chest
+    chestContainerOpenTime = 0,  -- Track when chest container first opened
+    deathStep = nil,
+    deathStepTick = nil,
+    deathLootStep = nil,
+    deathLootStepTick = nil,
+    -- Death loot tracking variables
+    diedInBossRoom = false,  -- Track if we died in the boss room
+    hadContinuedChallenge = false,  -- Track if we had continued challenge before death
+    deathLootAvailable = false,  -- Track if there's loot to collect from death
+    everUsedContinueChallenge = false,  -- Track if continue challenge has ever been used this session
+    totalSeenInChest = 0,
+    totalClaimed = 0,
+    killLogged = false,
+    enrageDetected = false,
+}

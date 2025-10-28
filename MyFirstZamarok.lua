@@ -14,31 +14,31 @@ end
 
 -- Mechanic and animation placeholders
 Local FlamesOfZamarok_Mechanic = {
-
+-- PlaceHolder
 }
 
 Local DecimateAndChaosBlast_Mechanic = {
-
+-- PlaceHolder
 }
 
 Local InfernalTomb_Mechanic = {
-
+-- PlaceHolder
 }
 
 Local AdrenalineCage_Mechanic = {
-
+-- PlaceHolder
 }
 
 Local ChaosWitchChannelers_Mechanic = {
-
+-- PlaceHolder
 }
 
 Local RunesofDestruction_Mechanic = {
-
+-- PlaceHolder
 }
 
 Local RunesAndHexes_Mechanic = {
-
+-- PlaceHolder
 }
 
 local Zamarok_Id = 

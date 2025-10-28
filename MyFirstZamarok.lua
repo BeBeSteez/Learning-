@@ -41,6 +41,12 @@ Local RunesAndHexes_Mechanic = {
 
 }
 
+local Zamarok_Id = 
+-- Object IDs for mechanic end detection
+local MECHANIC_OBJECTS = {
+-- PlaceHolder
+}
+
 -- Gearing and swapping at higher enrages
 local GEAR_IDS = {
     PowerMeleeGear = {

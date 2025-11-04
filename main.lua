@@ -1,26 +1,15 @@
 ---@version 1.0.1
 ---@author Jared
----@description Hardmode Arch-Glacor combat script - consistent to 2500-3000% enrage
+---@description Hardmode MFZ combat script - consistent to 0-500% enrage
 local version = "1.0.1"
 local API = require("api")
 
 --[[
-    Hardmode AG Script - Works consistently up to 2500-3000% enrage
-    Author: Jared
-
-    Features:
-    - Auto-loot detection for Frozen core of Leng and Glacor core
-    - Optimized rotations for consistent kills up to 3000% enrage
-    - Intelligent buff management with incense potency checking
-    - Requires 50% hard mode completion
-
-    Changelog:
-    - Fixed inventory API calls for latest client
-    - Updated buff management conditions
-    - Added intelligent incense stick potency detection
+    Hardmode MFZ Script - Works consistently up to 0-500% enrage
+    CREDITS: Jared AND SONSON
 ]]
 
-local PlayerManager     = require("Arch-Glacor.core.player_manager")        -- file saved in Lua_Scripts\MyFirstZamarok\core
+local PlayerManager     = require("MyFirstZamarok.core.player_manager")        -- file saved in Lua_Scripts\MyFirstZamarok\core
 
 local Config            = require("MyFirstZamarok.MFZ.config")              -- file saved in Lua_Scripts\MyFirstZamarok\MFZ
 local Utils             = require("MyFirstZamarok.MFZ.utils")               -- file saved in Lua_Scripts\MyFirstZamarok\MFZ
